@@ -15,5 +15,6 @@
     <ul>
         <li><a href="index.php">accueil</a></li>
         <li><a href="add.php">Ajouté un film</a></li>
+        <li><a href="inscription.php">s'inscrire</a></li>
     </ul>
 </nav>

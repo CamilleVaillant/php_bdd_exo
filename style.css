@@ -1,22 +1,220 @@
-*{
+/* Réinitialisation des styles */
+* {
     text-decoration: none;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-body{
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url(../php_bdd_exo/image/salle\ de\ cinema.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* S'assurer que la navbar est au-dessus des autres éléments */
+}
+
+nav ul {
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    
 }
 
-article{
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #f0a500; /* Couleur au survol */
+}
+
+/* Conteneur des articles */
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    gap: 20px; /* Espacement entre les éléments */
+    margin-top: 100px; /* Pour compenser la navbar fixée */
+    padding: 20px;
+    justify-items: center; /* Centre les articles horizontalement */
+}
+
+/* Articles */
+article {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     border: solid 1px black;
-    display: block;
     text-align: center;
-    width: 250px;
-    margin: 3rem;
-    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 200px; /* Ajustez la largeur de l'article selon votre préférence */
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.05); /* Effet au survol */
+}
+
+article p {
+    margin-bottom: 10px;
+}
+
+article a {
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+article a:hover {
+    color: #f0a500;
+}
+/* Réinitialisation des styles */
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Conteneur de l'article */
+.article-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Remplir toute la hauteur de la page */
+    padding: 20px;
+    margin-top: 100px; /* Pour compenser la navbar */
+}
+
+/* Article */
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 300px;
+    max-width: 100%;
+}
+
+article h1 {
+    margin-bottom: 20px;
+}
+
+article p {
+    margin-bottom: 10px;
+}
+
+article a {
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+article a:hover {
+    color: #f0a500;
+}
+/* Container principal pour centrer le formulaire */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* La hauteur de la fenêtre */
+    margin-top: 80px; /* Décalage pour que le formulaire ne soit pas sous la navbar */
+    padding: 20px;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Largeur fixe pour le formulaire */
+    text-align: center;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #f0a500;
 }
